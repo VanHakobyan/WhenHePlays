@@ -1,0 +1,18 @@
+﻿#center {
+    margin: 0 auto;
+    position: relative;
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    border: 2px solid green;
+    height: 500px;
+}
+#home {
+    float: left;
+}
+#away {
+    float: right;
+}

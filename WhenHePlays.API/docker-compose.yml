@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  whp:
+    image: whp
+    build:
+      context: .
+      dockerfile: WHP\Dockerfile

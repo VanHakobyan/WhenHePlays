@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D9595100-1A6E-417E-9899-87F1638D4590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend Part", "Frontend Part", "{2F59EA34-2CAA-4635-BA3D-A9D3F29C33AD}"
+	ProjectSection(SolutionItems) = preProject
+		Getter.js = Getter.js
+		index.html = index.html
+		View.css = View.css
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9595100-1A6E-417E-9899-87F1638D4590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9595100-1A6E-417E-9899-87F1638D4590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9595100-1A6E-417E-9899-87F1638D4590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9595100-1A6E-417E-9899-87F1638D4590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1780E244-9514-4EA2-8A96-4703804C27B4}
+	EndGlobalSection
+EndGlobal
