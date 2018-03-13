@@ -6,16 +6,24 @@ using Parser;
 namespace API.Controllers
 {
     [Produces("application/json")]
-    [Route("api/Arsenal")]
     [EnableCors("MyPolicy")]
     public class ArsenalController : Controller
     {
         ArsenalPasrser _arsenalPasrser = new ArsenalPasrser();
-        [HttpGet]
+        LineupsParser _lineupsParser=new LineupsParser();
+
+        [HttpGet, Route("api/Arsenal")]
         public async Task<IActionResult> Get()
         {
             var content = await _arsenalPasrser.GetContent();
             return Ok(content);
+        }
+
+        [Route("api/Arsenal/lineups"), HttpGet]
+        public async Task<IActionResult> GetLineups()
+        {
+            var lineups = await _lineupsParser.GetLineups();
+            return Ok(lineups);
         }
     }
 }
