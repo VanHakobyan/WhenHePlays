@@ -7,9 +7,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            LineupsParser _lineupsParser = new LineupsParser();
-            var lineups = _lineupsParser.GetLineups().Result;
-
+            //LineupsParser _lineupsParser = new LineupsParser();
+            //var lineups = _lineupsParser.GetLineups().Result;
         }
     }
 }

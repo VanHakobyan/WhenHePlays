@@ -31,7 +31,7 @@ namespace Parser
             var htmlLineups = String.Empty;
             if (a.InnerText == "Lineups")
             {
-                var urlLineups = a.Attributes["href"].Value.Insert(0, @"http://www.flashscore.mobi").Replace("s=1&amp;", "");
+                var urlLineups = a.Attributes["href"].Value.Insert(0, @"http://www.flashscore.mobi");
                 htmlLineups = await _httpClient.GetStringAsync(urlLineups);
             }
             else
