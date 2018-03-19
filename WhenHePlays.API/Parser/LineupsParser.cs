@@ -12,8 +12,8 @@ namespace Parser
 {
     public class LineupsParser
     {
-        private readonly HttpClient _httpClient = new HttpClient();
-        private const string teamName = "Ulsan";
+        HttpClient _httpClient = new HttpClient();
+        private const string teamName = "Defensor";
         public async Task<string> GetLineups()
         {
             HtmlAgilityPack.HtmlDocument _document = new HtmlDocument();
@@ -39,6 +39,24 @@ namespace Parser
                 htmlLineups = htmlArsenalPage;
             }
             _document = new HtmlDocument();
+            //var htmlArsenalPage = await _httpClient.GetStringAsync(link);
+            //_document.LoadHtml(htmlArsenalPage);
+            //var detailTabs = _document.DocumentNode.SelectSingleNode(".//p[@id='detail-tabs']");
+            //var a = detailTabs.SelectSingleNode(".//a");
+            //var htmlLineups = String.Empty;
+            //if (a.InnerText == "Lineups")
+            //{
+            //    var href = a.Attributes["href"].Value;
+            //    var indexOfLastSlash = href.LastIndexOf('/');
+            //    href = href.Replace(href.Substring(indexOfLastSlash), "?t=lineups").Insert(0, @"http://www.flashscore.mobi");
+            //    htmlLineups = await _httpClient.GetStringAsync(href);
+            //}
+            //else
+            //{
+            //    htmlLineups = htmlArsenalPage;
+            //}
+            link = link.Insert(link.Length, "?s=1&t=lineups");
+            var htmlLineups = await _httpClient.GetStringAsync(link);
             _document.LoadHtml(htmlLineups);
             var lineupsAll = _document.DocumentNode.SelectSingleNode(".//div[@id='detail-tab-content']").InnerHtml;
             return lineupsAll;

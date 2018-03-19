@@ -19,7 +19,7 @@ namespace API.Controllers
             return Ok(content);
         }
 
-        [Route("api/Arsenal/lineups"), HttpGet]
+        [HttpGet, Route("api/lineups")]
         public async Task<IActionResult> GetLineups()
         {
             var lineups = await _lineupsParser.GetLineups();
