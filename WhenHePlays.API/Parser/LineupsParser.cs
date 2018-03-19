@@ -12,7 +12,7 @@ namespace Parser
 {
     public class LineupsParser
     {
-        HttpClient _httpClient = new HttpClient();
+        private readonly HttpClient _httpClient = new HttpClient();
         private const string teamName = "Ulsan";
         public async Task<string> GetLineups()
         {
@@ -28,7 +28,7 @@ namespace Parser
             _document.LoadHtml(htmlArsenalPage);
             var detailTabs = _document.DocumentNode.SelectSingleNode(".//p[@id='detail-tabs']");
             var a = detailTabs.SelectSingleNode(".//a");
-            var htmlLineups = String.Empty;
+            var htmlLineups = string.Empty;
             if (a.InnerText == "Lineups")
             {
                 var urlLineups = a.Attributes["href"].Value.Insert(0, @"http://www.flashscore.mobi");
