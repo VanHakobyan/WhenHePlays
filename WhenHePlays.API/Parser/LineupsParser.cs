@@ -24,6 +24,21 @@ namespace Parser
             var arsenalMatch = allMatches.FirstOrDefault(x => x.Contains(teamName));
             _document.LoadHtml(arsenalMatch);
             var link = _document.DocumentNode.SelectSingleNode(".//a").Attributes["href"].Value.Insert(0, "http://www.flashscore.mobi/");
+            var htmlArsenalPage = await _httpClient.GetStringAsync(link);
+            _document.LoadHtml(htmlArsenalPage);
+            var detailTabs = _document.DocumentNode.SelectSingleNode(".//p[@id='detail-tabs']");
+            var a = detailTabs.SelectSingleNode(".//a");
+            var htmlLineups = string.Empty;
+            if (a.InnerText == "Lineups")
+            {
+                var urlLineups = a.Attributes["href"].Value.Insert(0, @"http://www.flashscore.mobi");
+                htmlLineups = await _httpClient.GetStringAsync(urlLineups);
+            }
+            else
+            {
+                htmlLineups = htmlArsenalPage;
+            }
+            _document = new HtmlDocument();
             //var htmlArsenalPage = await _httpClient.GetStringAsync(link);
             //_document.LoadHtml(htmlArsenalPage);
             //var detailTabs = _document.DocumentNode.SelectSingleNode(".//p[@id='detail-tabs']");
