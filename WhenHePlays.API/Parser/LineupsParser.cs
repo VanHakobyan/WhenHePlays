@@ -13,7 +13,7 @@ namespace Parser
     public class LineupsParser
     {
         HttpClient _httpClient = new HttpClient();
-        private const string teamName = "Defensor";
+        private const string teamName = "Sydney";
         public async Task<string> GetLineups()
         {
             HtmlAgilityPack.HtmlDocument _document = new HtmlDocument();
@@ -56,8 +56,8 @@ namespace Parser
             //    htmlLineups = htmlArsenalPage;
             //}
             link = link.Insert(link.Length, "?s=1&t=lineups");
-            var htmlLineups = await _httpClient.GetStringAsync(link);
-            _document.LoadHtml(htmlLineups);
+            var htmlLineups1 = await _httpClient.GetStringAsync(link);
+            _document.LoadHtml(htmlLineups1);
             var lineupsAll = _document.DocumentNode.SelectSingleNode(".//div[@id='detail-tab-content']").InnerHtml;
             return lineupsAll;
         }

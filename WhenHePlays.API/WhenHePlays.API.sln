@@ -3,19 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{D9595100-1A6E-417E-9899-87F1638D4590}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{D9595100-1A6E-417E-9899-87F1638D4590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parser", "Parser\Parser.csproj", "{1FC2A1FA-C990-4865-8E60-C9987B6D45CC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend Part", "Frontend Part", "{2F59EA34-2CAA-4635-BA3D-A9D3F29C33AD}"
 	ProjectSection(SolutionItems) = preProject
-		Getter.js = Getter.js
 		index.html = index.html
-		LineupsGetter.js = LineupsGetter.js
 		View.css = View.css
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{72E82E04-D4B1-4FB4-820D-BB93C80447DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{72E82E04-D4B1-4FB4-820D-BB93C80447DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10934EDB-BCC3-43D7-A710-B7B9C6619410}"
+	ProjectSection(SolutionItems) = preProject
+		Getter.js = Getter.js
+		init.js = init.js
+		LineupsGetter.js = LineupsGetter.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imgs", "imgs", "{0D744110-D17B-41FA-9547-C1A52A2D2287}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Desktop\letter_s.jpg = ..\..\..\..\Desktop\letter_s.jpg
+		..\..\..\..\Desktop\letter_v.jpg = ..\..\..\..\Desktop\letter_v.jpg
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +49,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{10934EDB-BCC3-43D7-A710-B7B9C6619410} = {2F59EA34-2CAA-4635-BA3D-A9D3F29C33AD}
+		{0D744110-D17B-41FA-9547-C1A52A2D2287} = {2F59EA34-2CAA-4635-BA3D-A9D3F29C33AD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1780E244-9514-4EA2-8A96-4703804C27B4}
