@@ -12,10 +12,15 @@ namespace Parser
         private const string url = @"https://www.arsenal.com/";
         public async Task<string[]> GetContent()
         {
-            var result = new string[4];
+            var result = new string[6];
             var content = await _httpClient.GetStringAsync(url);
             document.LoadHtml(content);
             var article = document.DocumentNode.SelectSingleNode(".//article[@class='views-element-container']");
+            var eventInfo = article.SelectSingleNode(".//div[@class='event-info']");
+            var date = eventInfo.SelectSingleNode(".//div[@class='event-info__date']");
+            result[4] = date.InnerText.Trim(' ', '\n', '\r', '\t');
+            var venue = eventInfo.SelectSingleNode(".//div[@class='event-info__venue']");
+            result[5] = venue.InnerText;
             var imgs = article.SelectNodes(".//figure//img");
             for (var i = 0; i < imgs.Count; i++)
             {

@@ -5,6 +5,8 @@ function GetMatch() {
         centered[1].getElementsByTagName('img')[0].src = data[1];
         centered[0].getElementsByTagName('h2')[0].innerText = data[2];
         centered[1].getElementsByTagName('h2')[0].innerText = data[3];
+
+        document.getElementsByClassName('startDate')[0].innerText = data[4] + " | " + data[5];
     });
 }
 
