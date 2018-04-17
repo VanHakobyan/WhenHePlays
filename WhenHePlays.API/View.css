@@ -30,11 +30,11 @@
     text-align: center;
 }
 
-/* Style the image inside the centered container, if needed */
-.centered img {
-    width: 150px;
-    border-radius: 50%;
-}
+    /* Style the image inside the centered container, if needed */
+    .centered img {
+        width: 150px;
+        border-radius: 50%;
+    }
 
 #footer {
     position: fixed;
@@ -47,7 +47,7 @@
     border: solid 1px;
 }
 
-.btn{
+.btn {
     display: inline-block;
     color: #666;
     background-color: #eee;
@@ -62,32 +62,33 @@
     border-bottom-width: 3px;
     margin: 5px;
 }
-.btn:hover {
-    background-color: #e3e3e3;
-    border-color: rgba(0,0,0,0.5);
-}
-	
-.btn:active {
-    background-color: #CCC;
-    border-color: rgba(0,0,0,0.9);
-}
 
-.btn.btn-red {
-    background-color: #E48681;
-    border-color: rgba(0,0,0,0.3);
-    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-    color: #FFF;
-}
+    .btn:hover {
+        background-color: #e3e3e3;
+        border-color: rgba(0,0,0,0.5);
+    }
 
-.btn.btn-red:hover {
-    background-color: #DA4F49;
-    border-color: rgba(0,0,0,0.5);
-}
-	
-.btn.btn-red:active {
-    background-color: #B32C24;
-    border-color: rgba(0,0,0,0.9);
-}
+    .btn:active {
+        background-color: #CCC;
+        border-color: rgba(0,0,0,0.9);
+    }
+
+    .btn.btn-red {
+        background-color: #E48681;
+        border-color: rgba(0,0,0,0.3);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+        color: #FFF;
+    }
+
+        .btn.btn-red:hover {
+            background-color: #DA4F49;
+            border-color: rgba(0,0,0,0.5);
+        }
+
+        .btn.btn-red:active {
+            background-color: #B32C24;
+            border-color: rgba(0,0,0,0.9);
+        }
 
 /* The Modal (background) */
 .modal {
@@ -109,7 +110,7 @@
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 27%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -127,25 +128,87 @@
         cursor: pointer;
     }
 
-#v {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    z-index: 15;
-    top: 42%;
-    left: 41%;
-}
-#s {
-    position: fixed;
-    width: 160px;
-    height: 170px;
-    z-index: 15;
-    top: 39%;
-    right: 39%;
-}
-
 .timePanel {
     top: 31%;
-    left: 37%;
-    position: fixed;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.startDate {
+    background: linear-gradient(to right, red, white);
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*nkarneri pah@ petq a dzvi*/
+#v {
+    height: 100px;
+    width: 100px;
+}
+
+#s {
+    width: 160px;
+    height: 170px;
+}
+
+.vsPanel {
+    width: 100%;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+}
+
+#vsImages {
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext {
+    top: -5px;
+    left: 105%;
+}
+
+    .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 100%; /* To the right of the tooltip */
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent transparent black;
+    }
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
 }

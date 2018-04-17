@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="View.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="Getter.js"></script>
     <script src="init.js"></script>
+    <script src="Getter.js"></script>
     <link type="text/css" href="View.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,6 +17,14 @@
     <div class="timePanel">
         <div class="startDate"></div>
     </div>
+
+    <div class="vsPanel">
+        <div id="vsImages">
+            <img src="letter_v.jpg" alt="letter_v" id="v" />
+            <img src="letter_s.png" alt="letter_s" id="s" />
+        </div>
+    </div>
+
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -34,11 +42,13 @@
 
     <div class="split left">
         <div id="buttons">
-            <button type="button" id="startingLineups" class="btn btn-red">Lineups</button>
+            <div>
+                <button type="button" id="startingLineups" class="btn btn-red">Lineups</button>
+                <div class="tooltip">
+                    <span class="tooltiptext">No lineups available</span>
+                </div>
+            </div>
         </div>
-
-        <img src="letter_v.jpg" alt="letter_v" id="v" />
-
         <div class="centered">
             <img alt="home">
             <h2 id="homeTeam"></h2>
@@ -46,7 +56,6 @@
     </div>
 
     <div class="split right">
-        <img src="letter_s.png" alt="letter_s" id="s" />
         <div class="centered">
             <img alt="away">
             <h2 id="awayTeam"></h2>
