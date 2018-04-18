@@ -13,7 +13,7 @@ namespace Parser
     public class LineupsParser
     {
         HttpClient _httpClient = new HttpClient();
-        private const string teamName = "Sydney";
+        private const string teamName = "Home Utd";
         public async Task<string> GetLineups()
         {
             HtmlAgilityPack.HtmlDocument _document = new HtmlDocument();
